@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".TestPage">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="This is the test page"
+        android:textSize="40dp"
+        android:gravity="center"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
