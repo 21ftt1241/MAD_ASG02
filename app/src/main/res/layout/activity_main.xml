@@ -3,28 +3,46 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
+    android:background="#2B2D42"
+    android:padding="16dp"
 >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Main Menu"
-        android:textAlignment="center"
         android:layout_margin="10sp"
-        android:textSize="25sp"/>
+        android:text="MAD ASG02"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#EDF2F4"
+        android:textFontWeight="400"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:text="Cafe Menu App"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#EDF2F4"
+        app:autoSizeMaxTextSize="40sp"
+        app:autoSizeMinTextSize="20sp"
+        app:autoSizeTextType="uniform" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_height="wrap_content"
-        android:text="Test"
-        android:padding="8dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
         android:onClick="openTestPage"
-        />
+        android:padding="8dp"
+        android:text="Continue"/>
 
 </LinearLayout>
