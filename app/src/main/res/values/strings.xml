@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ASG02</string>
+
+    <string name="mainTxtDesc">
+        Group members:
+        1) Muhammad Al Mustaqim bin Haji Rosli [21FTT1241]
+        2) Maximus Yong Tian Chen [21FTT1245]
+        3) Abdul Wafi Hakim bin Abd Hakim [21FTT1251]
+    </string>
+
+
 </resources>
