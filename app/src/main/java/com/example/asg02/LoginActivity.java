@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AppAuth extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     static String username = "";
     static String password = "";
@@ -16,7 +16,7 @@ public class AppAuth extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_appauth);
+        setContentView(R.layout.login);
     }
 
     public void register(View view){

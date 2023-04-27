@@ -30,12 +30,12 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please fill in both fields.",Toast.LENGTH_SHORT).show();
             passwordTemp.setError("Please enter password.");
         } else {
-            AppAuth.username = usernameTemp.getText().toString();
-            AppAuth.password = passwordTemp.getText().toString();
+            LoginActivity.username = usernameTemp.getText().toString();
+            LoginActivity.password = passwordTemp.getText().toString();
 
             Toast.makeText(getApplicationContext(),"Registration Successful.",Toast.LENGTH_SHORT).show();
 
-            Intent i = new Intent(this, AppAuth.class);
+            Intent i = new Intent(this, LoginActivity.class);
             startActivity(i);
         }
 
