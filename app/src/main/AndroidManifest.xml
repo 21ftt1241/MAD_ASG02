@@ -15,10 +15,10 @@
             android:name=".summaryActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderHistoryPage"
+            android:name=".HistoryPageActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderPage"
+            android:name=".OrderPageActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
