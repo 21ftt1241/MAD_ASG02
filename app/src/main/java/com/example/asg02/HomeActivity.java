@@ -14,12 +14,12 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.home);
     }
     public void openOrderPage(View view){
-        Intent i = new Intent(this, OrderPage.class);
+        Intent i = new Intent(this, OrderPageActivity.class);
         startActivity(i);
     }
 
     public void openOrderHistory(View view){
-        Intent i = new Intent(this, OrderHistoryPage.class);
+        Intent i = new Intent(this, HistoryPageActivity.class);
         startActivity(i);
     }
 }
