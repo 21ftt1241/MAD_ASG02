@@ -12,13 +12,10 @@
         android:theme="@style/Theme.ASG02"
         tools:targetApi="31">
         <activity
-            android:name=".itemRV1"
+            android:name=".HistoryPageActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderHistoryPage"
-            android:exported="false" />
-        <activity
-            android:name=".OrderPage"
+            android:name=".OrderPageActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
