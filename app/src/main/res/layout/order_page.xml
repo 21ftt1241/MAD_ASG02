@@ -242,7 +242,6 @@
                                 android:textSize="20sp" />
                         </AbsoluteLayout>
 
-
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
