@@ -8,15 +8,14 @@
     tools:context=".OrderPageActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="571dp"
         android:layout_height="match_parent"
         android:layout_x="-1dp"
         android:layout_y="-2dp">
 
         <AbsoluteLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/wlcMsg"
@@ -63,8 +62,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="americano"/>
+                                android:onClick="americano"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/americanoAdd"
@@ -74,8 +73,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="americano"/>
+                                android:onClick="americano"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -130,8 +129,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="latte"/>
+                                android:onClick="latte"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/latteAdd"
@@ -141,8 +140,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="latte"/>
+                                android:onClick="latte"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -197,8 +196,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="cappuccino"/>
+                                android:onClick="cappuccino"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/cappuccinoAdd"
@@ -208,8 +207,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="cappuccino"/>
+                                android:onClick="cappuccino"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -257,14 +256,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tea"
                 android:layout_x="12dp"
                 android:layout_y="400dp"
+                android:text="Tea"
                 android:textColor="#8C4303"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
 
-<!--            Tea Section-->
+            <!--            Tea Section-->
             <LinearLayout
                 android:layout_width="400dp"
                 android:layout_height="270dp"
@@ -301,8 +299,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="green"/>
+                                android:onClick="green"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/greenAdd"
@@ -312,8 +310,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="green"/>
+                                android:onClick="green"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -368,8 +366,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="oolong"/>
+                                android:onClick="oolong"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/oolongAdd"
@@ -379,8 +377,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="oolong"/>
+                                android:onClick="oolong"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -435,8 +433,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="lemon"/>
+                                android:onClick="lemon"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/lemonAdd"
@@ -446,8 +444,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                />
+                                android:onClick="lemon"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -490,8 +488,8 @@
                 android:layout_x="129dp"
                 android:layout_y="740dp"
                 android:backgroundTint="#8C4303"
-                android:text="Confirm Order"
-                android:onClick="confirmOrder"/>
+                android:onClick="confirmOrder"
+                android:text="Confirm Order" />
 
         </AbsoluteLayout>
     </ScrollView>
