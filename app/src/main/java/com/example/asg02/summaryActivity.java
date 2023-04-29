@@ -11,11 +11,11 @@ import org.w3c.dom.Text;
 
 public class summaryActivity extends AppCompatActivity {
 
-    static String orderLine = "";
     static String orderQty = "";
     static String orderItem = "";
     static String orderPrice = "";
 
+    static String orderTotal = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,8 @@ public class summaryActivity extends AppCompatActivity {
         TextView tvPrice = findViewById(R.id.summaryPrice);
         tvPrice.setText(orderPrice);
 
+        TextView tvTotal = findViewById(R.id.summaryTotal);
+        tvTotal.setText(orderTotal);
     }
     public void btnPayment(View view){
         Toast.makeText(getApplicationContext(),"Fuck you",Toast.LENGTH_SHORT).show();
