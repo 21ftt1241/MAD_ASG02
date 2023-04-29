@@ -18,9 +18,6 @@
             android:name=".summaryActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryPageActivity"
-            android:exported="false" />
-        <activity
             android:name=".OrderPageActivity"
             android:exported="false" />
         <activity

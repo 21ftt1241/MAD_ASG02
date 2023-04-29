@@ -20,7 +20,7 @@ public class OrderPageActivity extends AppCompatActivity {
     double lemonPrice = 2.00;
     double oolongPrice = 1.50;
 
-    static  double totalOrder = 0.00;
+    static double totalOrder = 0.00;
 
 
     @Override
