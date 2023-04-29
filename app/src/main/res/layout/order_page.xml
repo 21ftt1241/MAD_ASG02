@@ -8,23 +8,14 @@
     tools:context=".OrderPageActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="571dp"
         android:layout_height="match_parent"
         android:layout_x="-1dp"
         android:layout_y="-2dp">
 
         <AbsoluteLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-            <Button
-                android:id="@+id/backbtn"
-                android:layout_width="103dp"
-                android:layout_height="match_parent"
-                android:layout_x="297dp"
-                android:layout_y="9dp"
-                android:text="back" />
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/wlcMsg"
@@ -71,8 +62,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="americano"/>
+                                android:onClick="americano"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/americanoAdd"
@@ -82,8 +73,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="americano"/>
+                                android:onClick="americano"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -138,8 +129,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="latte"/>
+                                android:onClick="latte"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/latteAdd"
@@ -149,8 +140,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="latte"/>
+                                android:onClick="latte"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -205,8 +196,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-"
-                                android:onClick="cappuccino"/>
+                                android:onClick="cappuccino"
+                                android:text="-" />
 
                             <Button
                                 android:id="@+id/cappuccinoAdd"
@@ -216,8 +207,8 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+"
-                                android:onClick="cappuccino"/>
+                                android:onClick="cappuccino"
+                                android:text="+" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -265,17 +256,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tea"
                 android:layout_x="12dp"
                 android:layout_y="400dp"
+                android:text="Tea"
                 android:textColor="#8C4303"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
 
-<!--            Tea Section-->
+            <!--            Tea Section-->
             <LinearLayout
                 android:layout_width="400dp"
-                android:layout_height="260dp"
+                android:layout_height="270dp"
                 android:layout_x="3dp"
                 android:layout_y="430dp">
 
@@ -454,6 +444,7 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
+                                android:onClick="lemon"
                                 android:text="+" />
 
                             <TextView
@@ -492,10 +483,10 @@
 
             <Button
                 android:id="@+id/confirmOrder"
-                android:layout_width="185dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_x="115dp"
-                android:layout_y="771dp"
+                android:layout_x="129dp"
+                android:layout_y="740dp"
                 android:backgroundTint="#8C4303"
                 android:onClick="confirmOrder"
                 android:text="Confirm Order" />

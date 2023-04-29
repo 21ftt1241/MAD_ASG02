@@ -10,6 +10,17 @@ import android.widget.Toast;
 
 public class OrderPageActivity extends AppCompatActivity {
 
+    TextView textview;
+    int number;
+    int lemonQty, oolongQty, greenTeaQty, americcanoQty, latteQty, cappucinoQty;
+    double americanoPrice = 2.50;
+    double lattePrice = 2.50;
+    double cappucinoPrice = 2.50;
+    double greenTeaPrice = 3.00;
+    double lemonPrice = 2.00;
+    double oolongPrice = 1.50;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,13 +30,6 @@ public class OrderPageActivity extends AppCompatActivity {
         updateUsername.setText("Welcome, " + LoginActivity.username + "!");
     }
 
-    public void confirmOrder(View view) {
-        Intent i = new Intent(this, OrderSummaryActivity.class);
-        startActivity(i);
-    }
-
-    TextView textview;
-    int number;
 
     public void americano(View view) {
 
@@ -42,6 +46,7 @@ public class OrderPageActivity extends AppCompatActivity {
             textview.setText("0");
         } else {
             textview.setText(String.valueOf(number));
+            americcanoQty = number;
         }
 
     }
@@ -61,6 +66,7 @@ public class OrderPageActivity extends AppCompatActivity {
             textview.setText("0");
         } else {
             textview.setText(String.valueOf(number));
+            latteQty = number;
         }
 
     }
@@ -80,6 +86,7 @@ public class OrderPageActivity extends AppCompatActivity {
             textview.setText("0");
         } else {
             textview.setText(String.valueOf(number));
+            cappucinoQty = number;
         }
 
     }
@@ -99,7 +106,9 @@ public class OrderPageActivity extends AppCompatActivity {
             textview.setText("0");
         } else {
             textview.setText(String.valueOf(number));
+            greenTeaQty = number;
         }
+
 
     }
 
@@ -118,6 +127,7 @@ public class OrderPageActivity extends AppCompatActivity {
             textview.setText("0");
         } else {
             textview.setText(String.valueOf(number));
+            oolongQty = number;
         }
 
     }
@@ -137,8 +147,40 @@ public class OrderPageActivity extends AppCompatActivity {
             textview.setText("0");
         } else {
             textview.setText(String.valueOf(number));
+            lemonQty = number;
         }
+    }
 
+    public void confirmOrder(View view) {
+        if (americcanoQty > 0){
+            double total = americcanoQty * americanoPrice;
+            summaryActivity.orderQty = summaryActivity.orderQty + americcanoQty;
+            summaryActivity.orderItem = summaryActivity.orderItem + "Americcano";
+            summaryActivity.orderPrice = summaryActivity.orderPrice + total;
+        }
+        if (latteQty > 0){
+            double total = latteQty * lattePrice;
+            summaryActivity.orderQty = summaryActivity.orderQty + americcanoQty;
+            summaryActivity.orderLine = summaryActivity.orderLine + latteQty + "\t\tCoff. Latte\t\t" + total +"\n";
+        }
+        if (cappucinoQty > 0){
+            double total = cappucinoQty * cappucinoPrice;
+            summaryActivity.orderLine = summaryActivity.orderLine + cappucinoQty + "\t\tCappucino\t\t" + total +"\n";
+        }
+        if (greenTeaQty > 0){
+            double total = greenTeaQty * greenTeaPrice;
+            summaryActivity.orderLine = summaryActivity.orderLine + greenTeaQty + "\t\tGreen Tea\t\t" + total +"\n";
+        }
+        if (oolongQty > 0){
+            double total = oolongQty * oolongPrice;
+            summaryActivity.orderLine = summaryActivity.orderLine + oolongQty + "\t\tOolong Tea\t\t" + total +"\n";
+        }
+        if (lemonQty > 0){
+            double total = lemonQty * lemonPrice;
+            summaryActivity.orderLine = summaryActivity.orderLine + lemonQty + "\t\tLemon drinks\t\t" + total +"\n";
+        }
+        Intent i = new Intent(this, summaryActivity.class);
+        startActivity(i);
     }
 
 }
