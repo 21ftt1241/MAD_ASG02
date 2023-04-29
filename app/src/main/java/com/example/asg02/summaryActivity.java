@@ -36,8 +36,13 @@ public class summaryActivity extends AppCompatActivity {
     }
     public void btnPayment(View view){
         Toast.makeText(getApplicationContext(),"Fuck you",Toast.LENGTH_SHORT).show();
+
+
 //        Insert the payment logic here
 //        If the value is not the same as the order total, give out error toast
 //        If the same, go to home and pop up toast 'payment successful'
+
+
+
     }
 }
