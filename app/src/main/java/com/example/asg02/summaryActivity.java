@@ -2,8 +2,10 @@ package com.example.asg02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,9 +37,19 @@ public class summaryActivity extends AppCompatActivity {
         tvTotal.setText(orderTotal);
     }
     public void btnPayment(View view){
-        Toast.makeText(getApplicationContext(),"Fuck you",Toast.LENGTH_SHORT).show();
-//        Insert the payment logic here
-//        If the value is not the same as the order total, give out error toast
-//        If the same, go to home and pop up toast 'payment successful'
+
+        EditText payment = findViewById(R.id.inputPayment);
+
+        if (payment.getText().toString().equals(orderTotal)) {
+            Toast.makeText(getApplicationContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
+            summaryActivity.orderTotal = "";
+            summaryActivity.orderQty = "";
+            summaryActivity.orderItem = "";
+            summaryActivity.orderTotal = "";
+            Intent i = new Intent(this, HomeActivity.class);
+            startActivity(i);
+        }else{
+            Toast.makeText(getApplicationContext(), "Payment Failed", Toast.LENGTH_SHORT).show();
+        }
     }
 }

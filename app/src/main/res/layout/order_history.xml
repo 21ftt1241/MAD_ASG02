@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderHistoryActivity"
+    android:background="#F2DAC4"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Order History"
+        android:textColor="#8C4303"
+        android:textSize="40sp"
+        />
+
+
+
+    <!-- A CardView that contains a TextView -->
+
+
+    <LinearLayout
+        android:id="@+id/card_view"
+        android:layout_width="360dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#F2F2F2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Order #"
+            android:textColor="#8C4303"
+            android:textSize="30sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="QTY"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Order"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="$"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/historyQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="#8C4303"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/historyItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#8C4303"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/historyPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="#8C4303"
+                android:textSize="20sp"
+                android:layout_gravity="end"
+                />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="220dp"
+                android:layout_marginBottom="100dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Total:"
+                android:textColor="#8C4303"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/HistoryTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:fontFamily="sans-serif-black"
+                android:text="$$$$"
+                android:textColor="#8C4303"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/loginButton"
+        android:fontFamily="sans-serif-black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#8C4303"
+        android:onClick="homeBtn"
+        android:text="Home" />
+</LinearLayout>
