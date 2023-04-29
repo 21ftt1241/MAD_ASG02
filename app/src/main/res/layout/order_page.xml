@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativelayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2DAC4"
@@ -11,14 +10,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_x="3dp"
-        android:layout_y="0dp">
+        android:layout_x="-1dp"
+        android:layout_y="-2dp">
 
         <AbsoluteLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="Deprecated">
+            android:layout_height="match_parent"
+            >
 
             <TextView
                 android:id="@+id/wlcMsg"
@@ -32,8 +30,8 @@
             <LinearLayout
                 android:layout_width="400dp"
                 android:layout_height="270dp"
-                android:layout_x="6dp"
-                android:layout_y="42dp">
+                android:layout_x="3dp"
+                android:layout_y="90dp">
 
                 <HorizontalScrollView
                     android:layout_width="400dp"
@@ -65,7 +63,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-" />
+                                android:text="-"
+                                android:onClick="americano"/>
 
                             <Button
                                 android:id="@+id/americanoAdd"
@@ -75,10 +74,10 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+" />
+                                android:text="+"
+                                android:onClick="americano"/>
 
                             <TextView
-                                android:id="@+id/textView6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_x="69dp"
@@ -88,7 +87,6 @@
                                 android:textSize="20sp" />
 
                             <TextView
-                                android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_x="48dp"
@@ -132,7 +130,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-" />
+                                android:text="-"
+                                android:onClick="latte"/>
 
                             <Button
                                 android:id="@+id/latteAdd"
@@ -142,10 +141,10 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+" />
+                                android:text="+"
+                                android:onClick="latte"/>
 
                             <TextView
-                                android:id="@+id/textView8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_x="69dp"
@@ -155,7 +154,6 @@
                                 android:textSize="20sp" />
 
                             <TextView
-                                android:id="@+id/textView9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_x="70dp"
@@ -199,7 +197,8 @@
                                 android:layout_x="29dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="-" />
+                                android:text="-"
+                                android:onClick="cappuccino"/>
 
                             <Button
                                 android:id="@+id/cappuccinoAdd"
@@ -209,10 +208,10 @@
                                 android:layout_x="113dp"
                                 android:layout_y="209dp"
                                 android:backgroundTint="#8C4303"
-                                android:text="+" />
+                                android:text="+"
+                                android:onClick="cappuccino"/>
 
                             <TextView
-                                android:id="@+id/textView10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_x="69dp"
@@ -222,7 +221,6 @@
                                 android:textSize="20sp" />
 
                             <TextView
-                                android:id="@+id/textView11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_x="46dp"
@@ -245,8 +243,258 @@
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="12dp"
+                android:layout_y="61dp"
+                android:text="Coffee"
+                android:textColor="#8C4303"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tea"
+                android:layout_x="12dp"
+                android:layout_y="400dp"
+                android:textColor="#8C4303"
+                android:textSize="20sp"
+                />
+
+<!--            Tea Section-->
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="270dp"
+                android:layout_x="3dp"
+                android:layout_y="430dp">
+
+                <HorizontalScrollView
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <AbsoluteLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:background="#C4A484">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="106dp"
+                                android:layout_x="2dp"
+                                android:layout_y="6dp"
+                                android:src="@drawable/green_tea_latte" />
+
+                            <Button
+                                android:id="@+id/greenMinus"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_x="29dp"
+                                android:layout_y="209dp"
+                                android:backgroundTint="#8C4303"
+                                android:text="-"
+                                android:onClick="green"/>
+
+                            <Button
+                                android:id="@+id/greenAdd"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_x="113dp"
+                                android:layout_y="209dp"
+                                android:backgroundTint="#8C4303"
+                                android:text="+"
+                                android:onClick="green"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="69dp"
+                                android:layout_y="159dp"
+                                android:text="$3.00"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="24dp"
+                                android:layout_y="120dp"
+                                android:text="Green Tea Latte"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/greenNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="88dp"
+                                android:layout_y="219dp"
+                                android:text="0"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+                        </AbsoluteLayout>
+
+                        <LinearLayout
+                            android:layout_width="3dp"
+                            android:layout_height="match_parent" />
+
+                        <AbsoluteLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:background="#C4A484">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="106dp"
+                                android:layout_x="2dp"
+                                android:layout_y="6dp"
+                                android:src="@drawable/oolong_tea" />
+
+                            <Button
+                                android:id="@+id/oolongMinus"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_x="29dp"
+                                android:layout_y="209dp"
+                                android:backgroundTint="#8C4303"
+                                android:text="-"
+                                android:onClick="oolong"/>
+
+                            <Button
+                                android:id="@+id/oolongAdd"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_x="113dp"
+                                android:layout_y="209dp"
+                                android:backgroundTint="#8C4303"
+                                android:text="+"
+                                android:onClick="oolong"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="69dp"
+                                android:layout_y="159dp"
+                                android:text="$1.50"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="46dp"
+                                android:layout_y="120dp"
+                                android:text="Oolong Tea"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/oolongNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="88dp"
+                                android:layout_y="219dp"
+                                android:text="0"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+                        </AbsoluteLayout>
+
+                        <LinearLayout
+                            android:layout_width="3dp"
+                            android:layout_height="match_parent" />
+
+                        <AbsoluteLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:background="#C4A484">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="106dp"
+                                android:layout_x="2dp"
+                                android:layout_y="6dp"
+                                android:src="@drawable/ice_lemon_tea" />
+
+                            <Button
+                                android:id="@+id/lemonMinus"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_x="29dp"
+                                android:layout_y="209dp"
+                                android:backgroundTint="#8C4303"
+                                android:text="-"
+                                android:onClick="lemon"/>
+
+                            <Button
+                                android:id="@+id/lemonAdd"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_x="113dp"
+                                android:layout_y="209dp"
+                                android:backgroundTint="#8C4303"
+                                android:text="+"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="69dp"
+                                android:layout_y="159dp"
+                                android:text="$2.00"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="32dp"
+                                android:layout_y="121dp"
+                                android:text="Ice Lemon Tea"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/lemonNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_x="88dp"
+                                android:layout_y="219dp"
+                                android:text="0"
+                                android:textColor="#8C4303"
+                                android:textSize="20sp" />
+                        </AbsoluteLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirmOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="129dp"
+                android:layout_y="740dp"
+                android:backgroundTint="#8C4303"
+                android:text="Confirm Order"
+                android:onClick="confirmOrder"/>
+
         </AbsoluteLayout>
     </ScrollView>
 
 
-</AbsoluteLayout>
+</RelativeLayout>
