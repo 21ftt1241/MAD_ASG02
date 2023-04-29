@@ -10,5 +10,13 @@
     >
 
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Order History"
+        android:textColor="#8C4303"
+        android:textSize="40sp" />
 </RelativeLayout>
