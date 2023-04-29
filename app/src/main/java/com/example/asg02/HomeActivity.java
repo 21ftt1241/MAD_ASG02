@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openOrderHistory(View view){
-        Intent i = new Intent(this, HistoryPageActivity.class);
+        Intent i = new Intent(this, OrderHistoryActivity.class);
         startActivity(i);
     }
 }
