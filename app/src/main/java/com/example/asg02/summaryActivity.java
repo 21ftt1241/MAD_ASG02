@@ -36,18 +36,21 @@ public class summaryActivity extends AppCompatActivity {
         TextView tvTotal = findViewById(R.id.summaryTotal);
         tvTotal.setText(orderTotal);
     }
+
+    static boolean historyUpdate = false;
+
     public void btnPayment(View view){
 
         EditText payment = findViewById(R.id.inputPayment);
 
         if (payment.getText().toString().equals(orderTotal)) {
             Toast.makeText(getApplicationContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
-            summaryActivity.orderTotal = "";
-            summaryActivity.orderQty = "";
-            summaryActivity.orderItem = "";
-            summaryActivity.orderTotal = "";
+
+            historyUpdate = true;
+
             Intent i = new Intent(this, HomeActivity.class);
             startActivity(i);
+
         }else{
             Toast.makeText(getApplicationContext(), "Payment Failed", Toast.LENGTH_SHORT).show();
         }
