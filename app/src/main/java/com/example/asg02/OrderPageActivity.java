@@ -20,6 +20,8 @@ public class OrderPageActivity extends AppCompatActivity {
     double lemonPrice = 2.00;
     double oolongPrice = 1.50;
 
+    static  double totalOrder = 0.00;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,31 +156,47 @@ public class OrderPageActivity extends AppCompatActivity {
     public void confirmOrder(View view) {
         if (americcanoQty > 0){
             double total = americcanoQty * americanoPrice;
-            summaryActivity.orderQty = summaryActivity.orderQty + americcanoQty;
-            summaryActivity.orderItem = summaryActivity.orderItem + "Americcano";
-            summaryActivity.orderPrice = summaryActivity.orderPrice + total;
+            summaryActivity.orderQty = summaryActivity.orderQty + americcanoQty +"\n";
+            summaryActivity.orderItem = summaryActivity.orderItem + "Americano" +"\n";
+            summaryActivity.orderPrice = summaryActivity.orderPrice + total +"\n";
+            totalOrder = totalOrder + total;
         }
         if (latteQty > 0){
             double total = latteQty * lattePrice;
-            summaryActivity.orderQty = summaryActivity.orderQty + americcanoQty;
-            summaryActivity.orderLine = summaryActivity.orderLine + latteQty + "\t\tCoff. Latte\t\t" + total +"\n";
+            summaryActivity.orderQty = summaryActivity.orderQty + latteQty +"\n";
+            summaryActivity.orderItem = summaryActivity.orderItem + "Latte" +"\n";
+            summaryActivity.orderPrice = summaryActivity.orderPrice + total +"\n";
+            totalOrder = totalOrder + total;
         }
         if (cappucinoQty > 0){
             double total = cappucinoQty * cappucinoPrice;
-            summaryActivity.orderLine = summaryActivity.orderLine + cappucinoQty + "\t\tCappucino\t\t" + total +"\n";
+            summaryActivity.orderQty = summaryActivity.orderQty + cappucinoQty+"\n";
+            summaryActivity.orderItem = summaryActivity.orderItem + "Cappucino"+"\n";
+            summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
+            totalOrder = totalOrder + total;
         }
         if (greenTeaQty > 0){
             double total = greenTeaQty * greenTeaPrice;
-            summaryActivity.orderLine = summaryActivity.orderLine + greenTeaQty + "\t\tGreen Tea\t\t" + total +"\n";
+            summaryActivity.orderQty = summaryActivity.orderQty + greenTeaQty+"\n";
+            summaryActivity.orderItem = summaryActivity.orderItem + "Green Tea"+"\n";
+            summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
+            totalOrder = totalOrder + total;
         }
         if (oolongQty > 0){
             double total = oolongQty * oolongPrice;
-            summaryActivity.orderLine = summaryActivity.orderLine + oolongQty + "\t\tOolong Tea\t\t" + total +"\n";
+            summaryActivity.orderQty = summaryActivity.orderQty + oolongQty+"\n";
+            summaryActivity.orderItem = summaryActivity.orderItem + "Oolong Tea"+"\n";
+            summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
+            totalOrder = totalOrder + total;
         }
         if (lemonQty > 0){
             double total = lemonQty * lemonPrice;
-            summaryActivity.orderLine = summaryActivity.orderLine + lemonQty + "\t\tLemon drinks\t\t" + total +"\n";
+            summaryActivity.orderQty = summaryActivity.orderQty + lemonQty+"\n";
+            summaryActivity.orderItem = summaryActivity.orderItem + "Lemon Tea"+"\n";
+            summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
+            totalOrder = totalOrder + total;
         }
+        summaryActivity.orderTotal = String.valueOf(totalOrder);
         Intent i = new Intent(this, summaryActivity.class);
         startActivity(i);
     }
