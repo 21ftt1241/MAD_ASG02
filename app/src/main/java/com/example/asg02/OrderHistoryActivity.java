@@ -2,35 +2,39 @@ package com.example.asg02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class OrderHistoryActivity extends AppCompatActivity {
 
-    static String history = "";
-    static int order = 1;
+    static String orderHistory = "";
+    static int order = 0;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_history);
 
-        if(summaryActivity.historyUpdate == true) {
+        TextView updateHistory = findViewById(R.id.historyText);
 
-//            Doesnt work, separate individual value by \n and store into arrays, then combine all arraya together to form one sentence.
-//            Use loop to display all sentences.
+        if(summaryActivity.historyUpdate) {
 
-            String space = "                ";
-            String removeN = summaryActivity.orderQty.replace("\n", "") + space + summaryActivity.orderItem.replace("\n", "") + "            " + summaryActivity.orderPrice.replace("\n", "");
+            orderHistory = "";
 
-            history += "Order #" + order + "\n\n" +
-                    "QTY" + space + "Order" + space + "$\n" +
-                    removeN;
+            for (int i = 0; i < OrderPageActivity.arrQty.size(); i++){
+                updateHistory.setText("Quantity\t\t\t" + "Item\t\t\t" + "Price\t\t\t" + "\n" + orderHistory + "\n");
+                orderHistory += OrderPageActivity.arrQty.get(i).replace("\n", "") + "\t\t\t" +
+                        OrderPageActivity.arrItem.get(i).replace("\n", "") + "\t\t\t" +
+                        OrderPageActivity.arrPrice.get(i).replace("\n", "") + "\n";
 
-            TextView updateHistory = findViewById(R.id.historyText);
-            updateHistory.setText(history);
+            }
+            orderHistory += "Total:"+ OrderPageActivity.totalOrder + "\n";
 
             summaryActivity.orderPrice = "";
             summaryActivity.orderQty = "";

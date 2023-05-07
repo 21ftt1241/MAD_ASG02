@@ -11,11 +11,17 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class summaryActivity extends AppCompatActivity {
 
     static String orderQty = "";
     static String orderItem = "";
     static String orderPrice = "";
+
+    static String orderQty1 = "";
+    static String orderItem1 = "";
+    static String orderPrice1 = "";
 
     static String orderTotal = "";
 
@@ -35,6 +41,7 @@ public class summaryActivity extends AppCompatActivity {
 
         TextView tvTotal = findViewById(R.id.summaryTotal);
         tvTotal.setText(orderTotal);
+
     }
 
     static boolean historyUpdate = false;
@@ -47,6 +54,18 @@ public class summaryActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
 
             historyUpdate = true;
+
+            TextView tvQty = findViewById(R.id.summaryQty);
+            tvQty.setText("");
+
+            TextView tvItem = findViewById(R.id.summaryItem);
+            tvItem.setText("");
+
+            TextView tvPrice = findViewById(R.id.summaryPrice);
+            tvPrice.setText("");
+
+            TextView tvTotal = findViewById(R.id.summaryTotal);
+            tvTotal.setText("");
 
             Intent i = new Intent(this, HomeActivity.class);
             startActivity(i);
