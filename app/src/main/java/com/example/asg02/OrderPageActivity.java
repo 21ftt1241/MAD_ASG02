@@ -8,17 +8,19 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class OrderPageActivity extends AppCompatActivity {
 
     TextView textview;
     int number;
     int lemonQty, oolongQty, greenTeaQty, americcanoQty, latteQty, cappucinoQty;
     double americanoPrice = 2.50;
-    double lattePrice = 2.50;
-    double cappucinoPrice = 2.50;
+    double lattePrice = 3.50;
+    double cappucinoPrice = 4.00;
     double greenTeaPrice = 3.00;
-    double lemonPrice = 2.00;
-    double oolongPrice = 1.50;
+    double lemonPrice = 1.50;
+    double oolongPrice = 2.00;
 
     static double totalOrder = 0.00;
 
@@ -153,52 +155,106 @@ public class OrderPageActivity extends AppCompatActivity {
         }
     }
 
+    static ArrayList<String> arrQty = new ArrayList<String>();
+    static ArrayList<String> arrItem = new ArrayList<String>();
+    static ArrayList<String> arrPrice = new ArrayList<String>();
+
     public void confirmOrder(View view) {
         if (americcanoQty > 0){
             double total = americcanoQty * americanoPrice;
+            summaryActivity.orderQty1 = String.valueOf(americcanoQty);
+            summaryActivity.orderItem1 = "Americano";
+            summaryActivity.orderPrice1 = String.valueOf(total);
+
             summaryActivity.orderQty = summaryActivity.orderQty + americcanoQty +"\n";
             summaryActivity.orderItem = summaryActivity.orderItem + "Americano" +"\n";
             summaryActivity.orderPrice = summaryActivity.orderPrice + total +"\n";
             totalOrder = totalOrder + total;
+
+            arrQty.add(summaryActivity.orderQty1);
+            arrItem.add(summaryActivity.orderItem1);
+            arrPrice.add(summaryActivity.orderPrice1);
         }
         if (latteQty > 0){
             double total = latteQty * lattePrice;
+            summaryActivity.orderQty1 = String.valueOf(latteQty);
+            summaryActivity.orderItem1 = "Latte";
+            summaryActivity.orderPrice1 = String.valueOf(total);
+
             summaryActivity.orderQty = summaryActivity.orderQty + latteQty +"\n";
             summaryActivity.orderItem = summaryActivity.orderItem + "Latte" +"\n";
             summaryActivity.orderPrice = summaryActivity.orderPrice + total +"\n";
             totalOrder = totalOrder + total;
+
+            arrQty.add(summaryActivity.orderQty1);
+            arrItem.add(summaryActivity.orderItem1);
+            arrPrice.add(summaryActivity.orderPrice1);
         }
         if (cappucinoQty > 0){
             double total = cappucinoQty * cappucinoPrice;
+            summaryActivity.orderQty1 = String.valueOf(cappucinoQty);
+            summaryActivity.orderItem1 = "Cappucino";
+            summaryActivity.orderPrice1 = String.valueOf(total);
+
             summaryActivity.orderQty = summaryActivity.orderQty + cappucinoQty+"\n";
             summaryActivity.orderItem = summaryActivity.orderItem + "Cappucino"+"\n";
             summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
             totalOrder = totalOrder + total;
+
+            arrQty.add(summaryActivity.orderQty1);
+            arrItem.add(summaryActivity.orderItem1);
+            arrPrice.add(summaryActivity.orderPrice1);
         }
         if (greenTeaQty > 0){
             double total = greenTeaQty * greenTeaPrice;
+            summaryActivity.orderQty1 = String.valueOf(greenTeaQty);
+            summaryActivity.orderItem1 = "Green Tea";
+            summaryActivity.orderPrice1 = String.valueOf(total);
+
             summaryActivity.orderQty = summaryActivity.orderQty + greenTeaQty+"\n";
             summaryActivity.orderItem = summaryActivity.orderItem + "Green Tea"+"\n";
             summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
             totalOrder = totalOrder + total;
+
+            arrQty.add(summaryActivity.orderQty1);
+            arrItem.add(summaryActivity.orderItem1);
+            arrPrice.add(summaryActivity.orderPrice1);
         }
         if (oolongQty > 0){
             double total = oolongQty * oolongPrice;
+            summaryActivity.orderQty1 = String.valueOf(oolongQty);
+            summaryActivity.orderItem1 = "Oolong Tea";
+            summaryActivity.orderPrice1 = String.valueOf(total);
+
             summaryActivity.orderQty = summaryActivity.orderQty + oolongQty+"\n";
             summaryActivity.orderItem = summaryActivity.orderItem + "Oolong Tea"+"\n";
             summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
             totalOrder = totalOrder + total;
+
+            arrQty.add(summaryActivity.orderQty1);
+            arrItem.add(summaryActivity.orderItem1);
+            arrPrice.add(summaryActivity.orderPrice1);
+
         }
         if (lemonQty > 0){
             double total = lemonQty * lemonPrice;
+            summaryActivity.orderQty1 = String.valueOf(lemonQty);
+            summaryActivity.orderItem1 = "Lemon Tea";
+            summaryActivity.orderPrice1 = String.valueOf(total);
+
             summaryActivity.orderQty = summaryActivity.orderQty + lemonQty+"\n";
             summaryActivity.orderItem = summaryActivity.orderItem + "Lemon Tea"+"\n";
             summaryActivity.orderPrice = summaryActivity.orderPrice + total+"\n";
             totalOrder = totalOrder + total;
+
+            arrQty.add(summaryActivity.orderQty1);
+            arrItem.add(summaryActivity.orderItem1);
+            arrPrice.add(summaryActivity.orderPrice1);
         }
         summaryActivity.orderTotal = String.valueOf(totalOrder);
         Intent i = new Intent(this, summaryActivity.class);
         startActivity(i);
+
     }
 
 }
