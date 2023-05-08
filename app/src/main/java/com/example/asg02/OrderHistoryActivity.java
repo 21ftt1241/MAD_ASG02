@@ -33,14 +33,22 @@ public class OrderHistoryActivity extends AppCompatActivity {
             for (int i = 0; i < OrderPageActivity.arrQty.size(); i++){
 
                 orderHistory += OrderPageActivity.arrQty.get(i).replace("\n", "") + "\t\t\t" +
+
+            orderHistory = "";
+            boolean x = true;
+            for (int i = 0; i < OrderPageActivity.arrQty.size(); i++) {
+
+                orderHistory += OrderPageActivity.arrQty.get(i).replace("\n", "") + "           " +
+
                         OrderPageActivity.arrItem.get(i).replace("\n", "") + "\t\t\t" +
                         OrderPageActivity.arrPrice.get(i).replace("\n", "") + "\n";
 
+                updateHistory.setText("Quantity\t\t\t" + "Item\t\t\t" + "Price\t\t\t" + "\n" + orderHistory);
             }
+              
             finalOrder += "Order #" + order + "\nQuantity\t\t\t" + "Item\t\t\t" + "Price\t\t\t" + "\n" + orderHistory + "\n";
             order++;
             finalReceipt.add(finalOrder);
-
 //            orderHistory += "Total:"+ OrderPageActivity.totalOrder + "\n";
 
             summaryActivity.orderPrice = "";
