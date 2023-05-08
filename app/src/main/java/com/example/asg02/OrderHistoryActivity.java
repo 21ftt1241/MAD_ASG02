@@ -30,10 +30,6 @@ public class OrderHistoryActivity extends AppCompatActivity {
 
             String orderHistory = "";
 
-            for (int i = 0; i < OrderPageActivity.arrQty.size(); i++){
-
-                orderHistory += OrderPageActivity.arrQty.get(i).replace("\n", "") + "\t\t\t" +
-
             orderHistory = "";
             boolean x = true;
             for (int i = 0; i < OrderPageActivity.arrQty.size(); i++) {
