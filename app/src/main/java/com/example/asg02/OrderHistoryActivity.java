@@ -26,15 +26,16 @@ public class OrderHistoryActivity extends AppCompatActivity {
         if(summaryActivity.historyUpdate) {
 
             orderHistory = "";
+            boolean x = true;
+            for (int i = 0; i < OrderPageActivity.arrQty.size(); i++) {
 
-            for (int i = 0; i < OrderPageActivity.arrQty.size(); i++){
-                updateHistory.setText("Quantity\t\t\t" + "Item\t\t\t" + "Price\t\t\t" + "\n" + orderHistory + "\n");
-                orderHistory += OrderPageActivity.arrQty.get(i).replace("\n", "") + "\t\t\t" +
+                orderHistory += OrderPageActivity.arrQty.get(i).replace("\n", "") + "           " +
                         OrderPageActivity.arrItem.get(i).replace("\n", "") + "\t\t\t" +
                         OrderPageActivity.arrPrice.get(i).replace("\n", "") + "\n";
 
+                updateHistory.setText("Quantity\t\t\t" + "Item\t\t\t" + "Price\t\t\t" + "\n" + orderHistory);
             }
-            orderHistory += "Total:"+ OrderPageActivity.totalOrder + "\n";
+//            orderHistory += "Total:"+ OrderPageActivity.totalOrder + "\n";
 
             summaryActivity.orderPrice = "";
             summaryActivity.orderQty = "";
